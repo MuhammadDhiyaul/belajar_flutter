@@ -51,8 +51,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Text(
-        'This is Text Widget',
+      home: Image(
+        image: NetworkImage(
+            'https://malangvoice.com/wp-content/uploads/2019/06/polinema.jpg'),
       ),
     );
   }
