@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,15 +56,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Contoh TextField")),
-        body: TextField(
-          obscureText: false,
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'Nama',
-          ),
-        ),
-      ),
+          appBar: AppBar(title: Text("Contoh Button")),
+          body: Container(
+              child: RaisedButton(
+            textColor: Colors.white,
+            onPressed: () {},
+            color: Colors.red[900],
+            child: Text("Button", style: TextStyle(fontSize: 20)),
+          ))),
     );
   }
 }
