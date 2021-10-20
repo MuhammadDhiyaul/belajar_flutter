@@ -56,14 +56,30 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(title: Text("Contoh Button")),
-          body: Container(
-              child: RaisedButton(
-            textColor: Colors.white,
-            onPressed: () {},
-            color: Colors.red[900],
-            child: Text("Button", style: TextStyle(fontSize: 20)),
-          ))),
+        appBar: AppBar(title: Text("Contoh Column Widget")),
+        body: Column(
+          children: [
+            Container(
+              color: Colors.purpleAccent,
+              child: FlutterLogo(
+                size: 90.0,
+              ),
+            ),
+            Container(
+              color: Colors.greenAccent,
+              child: FlutterLogo(
+                size: 90.0,
+              ),
+            ),
+            Container(
+              color: Colors.orangeAccent,
+              child: FlutterLogo(
+                size: 90.0,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
