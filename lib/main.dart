@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,9 +53,19 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Image(
-        image: NetworkImage(
-            'https://malangvoice.com/wp-content/uploads/2019/06/polinema.jpg'),
+      home: Container(
+        margin: EdgeInsets.only(top: 30),
+        color: Colors.white,
+        child: Column(
+          children: <Widget>[
+            AppBar(title: Text('Contoh Cupertino')),
+            CupertinoButton(
+              child: Text("Contoh button"),
+              onPressed: () {},
+            ),
+            CupertinoActivityIndicator(),
+          ],
+        ),
       ),
     );
   }
